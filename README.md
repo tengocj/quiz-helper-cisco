@@ -12,7 +12,8 @@ simple chrome extension that helps with mcq quiz pages.
 
 ## video
 
-demo video: [Video](./demo.mp4)
+<video src="./demo.mp4" controls width="900"></video>
+
 
 ## quick start
 
