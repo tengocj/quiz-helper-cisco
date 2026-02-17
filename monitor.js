@@ -11,7 +11,7 @@ const aiEnabled = document.getElementById("aiEnabled");
 const aiAnswer = document.getElementById("aiAnswer");
 const aiStatus = document.getElementById("aiStatus");
 const updatedAt = document.getElementById("updatedAt");
-const AI_MODEL = "gpt-4o-mini";
+const AI_MODEL = "gpt-5-mini";
 const monitorShell = document.querySelector(".shell");
 let pipWindowRef = null;
 let settingsSaveTimer = null;
@@ -222,7 +222,6 @@ async function fetchAiAnswer(apiKey, state) {
     },
     body: JSON.stringify({
       model: AI_MODEL,
-      temperature: 0,
       response_format: { type: "json_object" },
       messages: [
         {
