@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Helper Monitor</title>
+    <link rel="stylesheet" href="monitor.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="card">
+        <div class="card-head">
+          <h1>Quiz Helper</h1>
+          <div class="head-actions">
+            <button id="pinBtn" class="mini-btn" type="button">
+              Pin On Top
+            </button>
+            <span id="quizBadge" class="badge off">No quiz</span>
+          </div>
+        </div>
+        <p id="pinState" class="copy-state">Not pinned</p>
+        <div class="panel">
+          <span class="label">Extracted Question</span>
+          <p id="questionProgress" class="value">-</p>
+        </div>
+        <div class="panel">
+          <span class="label">Code Block</span>
+          <pre id="codeSnippet" class="code-block">-</pre>
+        </div>
+        <div class="panel">
+          <span class="label">Possible Answers</span>
+          <pre id="possibleAnswers" class="answers-block">-</pre>
+          <button id="copyQaBtn" class="copy-btn" type="button">
+            Copy Question + Answers
+          </button>
+          <p id="copyQaState" class="copy-state">-</p>
+        </div>
+        <div class="panel">
+          <span class="label">OpenAI Auto Answer (Optional)</span>
+          <input
+            id="openaiApiKey"
+            class="text-input"
+            type="password"
+            placeholder="sk-..."
+            autocomplete="off"
+          />
+          <label class="check-row">
+            <input id="aiEnabled" type="checkbox" />
+            <span>Enable auto answer</span>
+          </label>
+          <span class="hint"
+            >API key is stored locally in extension storage.</span
+          >
+          <span class="label">AI Suggested Answer</span>
+          <pre id="aiAnswer" class="answers-block">-</pre>
+          <p id="aiStatus" class="copy-state">AI disabled</p>
+        </div>
+        <div class="panel">
+          <span class="label">Last Update</span>
+          <p id="updatedAt" class="value">-</p>
+        </div>
+      </section>
+    </main>
+    <script src="monitor.js"></script>
+  </body>
+</html>

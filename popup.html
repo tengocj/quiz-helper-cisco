@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>quiz helper by tengocj</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>quiz helper</h1>
+      <p class="owner">by tengocj</p>
+      <div class="row">
+        <span>Monitoring</span><strong id="monitorState">disabled</strong>
+      </div>
+      <div class="row">
+        <span>Quiz detected</span><strong id="quizState">no</strong>
+      </div>
+      <div class="line" id="quizInfo">-</div>
+      <button id="toggleBtn" type="button">Enable monitoring</button>
+      <button id="windowBtn" class="secondary" type="button">
+        Open monitor window
+      </button>
+      <p class="disclaimer">
+        Helper only. Not for cheating or rule violations.
+      </p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
